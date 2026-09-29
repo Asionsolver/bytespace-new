@@ -10,10 +10,10 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
-    <footer className="bg-white border-t border-neutral-200">
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-10 lg:px-0 pt-[71px] pb-0">
+    <footer className="bg-white">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-10 lg:px-0 pt-[71px] pb-[48px]">
         {/* Main footer content */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-[92px] mb-16 lg:mb-[130px]">
+        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[92px] mb-16 lg:mb-[130px]">
           {/* Left: Logo + Newsletter */}
           <div className="flex flex-col gap-[45px] max-w-[528px]">
             {/* Logo + Description */}
@@ -39,10 +39,13 @@ export function Footer() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 rounded-full border border-neutral-200 bg-white px-6 py-[18px] text-base text-neutral-950 placeholder:text-neutral-500 outline-none font-body h-[52px]"
+                  className="w-full sm:w-[376px] rounded-full border border-neutral-200 bg-white px-6 text-base text-neutral-950 placeholder:text-neutral-500 outline-none font-body h-[52px]"
                 />
-                <Button variant="primary" className="h-[52px] shrink-0 px-8">
-                  Subscribe
+                <Button
+                  variant="primary"
+                  className="h-[52px] shrink-0 px-8 bg-[#CBFC01] hover:bg-[#D4FB20] text-[#242528] rounded-full text-base font-medium shadow-none cursor-pointer"
+                >
+                  Search
                 </Button>
               </div>
               <p className="font-body text-body-xs text-neutral-950 max-w-[504px]">
@@ -52,70 +55,55 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Right: Navigation Columns */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 flex-1">
-            {/* Browse Column 1 */}
-            <div className="flex flex-col gap-6">
-              <h4 className="font-body text-base leading-[1.5] font-normal text-neutral-950">
-                Browse
-              </h4>
-              <ul className="flex flex-col gap-4">
-                {FOOTER_BROWSE_COL1.map((item) => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+          {/* Right: Navigation Columns (No column headers as per Figma) */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 max-w-[580px] w-full pt-1">
+            {/* Column 1 */}
+            <ul className="flex flex-col gap-4">
+              {FOOTER_BROWSE_COL1.map((item) => (
+                <li key={item}>
+                  <Link
+                    href="#"
+                    className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-            {/* Browse Column 2 (no heading) */}
-            <div className="flex flex-col gap-6">
-              <h4 className="font-body text-base leading-[1.5] font-normal text-transparent select-none hidden sm:block">
-                Browse More
-              </h4>
-              <ul className="flex flex-col gap-4 sm:mt-0">
-                {FOOTER_BROWSE_COL2.map((item) => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Column 2 */}
+            <ul className="flex flex-col gap-4">
+              {FOOTER_BROWSE_COL2.map((item) => (
+                <li key={item}>
+                  <Link
+                    href="#"
+                    className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-            {/* Platform Column */}
-            <div className="flex flex-col gap-6">
-              <h4 className="font-body text-base leading-[1.5] font-normal text-neutral-950">
-                Platform
-              </h4>
-              <ul className="flex flex-col gap-4">
-                {FOOTER_PLATFORM.map((item) => (
-                  <li key={item}>
-                    <Link
-                      href="#"
-                      className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
-                    >
-                      {item}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {/* Column 3 */}
+            <ul className="flex flex-col gap-4">
+              {FOOTER_PLATFORM.map((item) => (
+                <li key={item}>
+                  <Link
+                    href="#"
+                    className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-neutral-200">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 py-4">
+        <div className="border-t border-[#CED0D3]">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6">
             <p className="font-body text-body-xs text-neutral-950">
               @ 2023 ByteSpace. All rights reserved.
             </p>
