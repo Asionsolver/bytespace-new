@@ -66,7 +66,7 @@ export function Hero() {
           style={{ left: "-118px", top: "221px", width: "385px", height: "385px" }}
         >
           <Image
-            src="/doodle/doodle-two.svg"
+            src="/doodle/doodle-two.webp"
             alt=""
             width={385}
             height={385}
@@ -81,7 +81,7 @@ export function Hero() {
           style={{ left: "183px", top: "477px", width: "175px", height: "175px" }}
         >
           <Image
-            src="/doodle/doodle-one.svg"
+            src="/doodle/doodle-one.webp"
             alt=""
             width={175}
             height={175}
@@ -96,7 +96,7 @@ export function Hero() {
           style={{ left: "18px", top: "682px", width: "342px", height: "342px" }}
         >
           <Image
-            src="/doodle/doodle-four.svg"
+            src="/doodle/doodle-four.webp"
             alt=""
             width={342}
             height={342}
@@ -111,7 +111,7 @@ export function Hero() {
           style={{ left: "1231px", top: "221px", width: "370px", height: "370px" }}
         >
           <Image
-            src="/doodle/doodle-three.svg"
+            src="/doodle/doodle-three.webp"
             alt=""
             width={370}
             height={370}
@@ -126,7 +126,7 @@ export function Hero() {
           style={{ left: "1106px", top: "464px", width: "188px", height: "188px" }}
         >
           <Image
-            src="/doodle/doodle-seven.svg"
+            src="/doodle/doodle-seven.webp"
             alt=""
             width={188}
             height={188}
@@ -141,7 +141,7 @@ export function Hero() {
           style={{ left: "1127px", top: "672px", width: "330px", height: "330px" }}
         >
           <Image
-            src="/doodle/doodle-six.svg"
+            src="/doodle/doodle-six.webp"
             alt=""
             width={330}
             height={330}

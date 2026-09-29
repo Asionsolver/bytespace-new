@@ -6,22 +6,48 @@ import { CheckCircle, SignalLevel, Rate } from "@/icons";
 export function Growth() {
   return (
     <section className="relative py-[120px] bg-[#FAFAFA] overflow-hidden">
-      {/* Background Gradient Mesh from Figma */}
-      <div className="absolute -left-[508px] -top-[466px] w-[2456px] h-[2391px] pointer-events-none opacity-80 z-0">
-        <Image
-          src="/growth/growth-bg-mesh.svg"
-          alt=""
-          fill
-          className="object-contain"
-        />
-      </div>
-
-      {/* Decorative Radial Glow from Figma */}
+      {/* 1. Top-Center Lime Glow (Figma Circle 2) */}
       <div
-        className="absolute -left-[287px] bottom-[200px] w-[672px] h-[672px] rounded-full pointer-events-none z-0 blur-[20px]"
+        className="absolute left-[15%] sm:left-[28%] -top-[180px] sm:-top-[240px] w-[700px] sm:w-[1000px] h-[700px] sm:h-[1000px] rounded-full pointer-events-none z-0 blur-[80px]"
         style={{
           background:
-            "radial-gradient(circle at 50% 50%, rgba(203, 252, 1, 0.6) 0%, rgba(203, 252, 1, 0.14) 53%, rgba(203, 252, 1, 0.04) 75%, rgba(203, 252, 1, 0) 100%)",
+            "radial-gradient(circle at 50% 50%, rgba(203, 252, 1, 0.42) 0%, rgba(203, 252, 1, 0.12) 53%, rgba(203, 252, 1, 0.03) 75%, transparent 100%)",
+        }}
+      />
+
+      {/* 2. Top-Right Subtle Blue Glow (Figma Circle 4) */}
+      <div
+        className="absolute -right-[220px] sm:-right-[320px] -top-[120px] sm:-top-[180px] w-[600px] sm:w-[850px] h-[600px] sm:h-[850px] rounded-full pointer-events-none z-0 blur-[80px]"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, rgba(0, 59, 226, 0.08) 0%, rgba(0, 59, 226, 0.02) 53%, transparent 100%)",
+        }}
+      />
+
+      {/* 3. Middle-Left Atmospheric Blue Glow (Figma Circle 3) */}
+      <div
+        className="absolute -left-[280px] sm:-left-[380px] top-[32%] sm:top-[38%] w-[700px] sm:w-[950px] h-[700px] sm:h-[950px] rounded-full pointer-events-none z-0 blur-[40px]"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, rgba(0, 59, 226, 0.16) 0%, rgba(0, 59, 226, 0.04) 53%, rgba(0, 59, 226, 0.01) 75%, transparent 100%)",
+        }}
+      />
+
+      {/* 4. Bottom-Left Vibrant Lime Glow (Figma Node #2003:717) */}
+      <div
+        className="absolute -left-[160px] sm:-left-[240px] -bottom-[120px] sm:-bottom-[160px] w-[500px] sm:w-[672px] h-[500px] sm:h-[672px] rounded-full pointer-events-none z-0 blur-[40px]"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, rgba(203, 252, 1, 0.58) 0%, rgba(203, 252, 1, 0.14) 53%, rgba(203, 252, 1, 0.04) 75%, transparent 100%)",
+        }}
+      />
+
+      {/* 5. Bottom-Right Soft Blue Glow (Figma Circle 1) */}
+      <div
+        className="absolute -right-[240px] sm:-right-[350px] -bottom-[180px] sm:-bottom-[260px] w-[700px] sm:w-[1000px] h-[700px] sm:h-[1000px] rounded-full pointer-events-none z-0 blur-[40px]"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, rgba(0, 59, 226, 0.22) 0%, rgba(0, 59, 226, 0.05) 53%, rgba(0, 59, 226, 0.01) 75%, transparent 100%)",
         }}
       />
 
@@ -154,7 +180,7 @@ export function Growth() {
             {/* Front: Student Man with Laptop */}
             <div className="absolute right-0   bottom-0 w-[420px] sm:w-[540px] lg:w-[577px] h-[440px] sm:h-[500px] lg:h-[540px] pointer-events-none ">
               <Image
-                src="/growth/growth-man.png"
+                src="/growth/growth-man.webp"
                 alt="Student smiling with laptop"
                 fill
                 className="object-contain"
@@ -196,7 +222,7 @@ export function Growth() {
             {/* Main Woman Image */}
             <div className="absolute left-[15px] sm:left-[78px] top-0 w-[340px] sm:w-[435px] h-[500px] sm:h-[596px] z-10 pointer-events-none">
               <Image
-                src="/growth/growth-woman.png"
+                src="/growth/growth-woman.webp"
                 alt="Course creator woman"
                 fill
                 className="object-contain object-bottom"
@@ -246,30 +272,26 @@ export function Growth() {
             </div>
 
             {/* Floating Card 3: Happy Students (Bottom-Right) */}
-            <div className="absolute right-0 bottom-[20px] sm:bottom-[30px] bg-white rounded-2xl p-4 flex flex-col gap-2 shadow-[0px_15px_35px_rgba(0,0,0,0.08)] border border-neutral-100 z-20 w-[240px] sm:w-[258px]">
-              <div className="flex flex-col gap-0.5">
-                <span className="font-body text-[15px] sm:text-base font-medium text-[#242528]">
+            <div className="absolute right-0 bottom-[20px] sm:bottom-[30px] bg-white rounded-lg p-4 flex flex-col gap-2 shadow-[0px_15px_35px_rgba(0,0,0,0.08)] z-20 w-[240px] sm:w-[258px]">
+              <div className="flex flex-col">
+                <span className="font-body text-[16px] leading-[24px] font-medium text-neutral-950">
                   Happy Students
                 </span>
-                <div className="flex items-center gap-1.5">
-                  <span className="font-body text-xs text-[#82868E]">
+                <div className="flex items-center">
+                  <span className="font-body text-[10px] leading-[150%] text-[#82868E]">
                     <strong className="text-[#242528] font-bold">4.5</strong> (240)
                   </span>
-                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                    <path
-                      d="M8 0.5L10.3 5.4L15.6 6.1L11.8 9.8L12.7 15.1L8 12.6L3.3 15.1L4.2 9.8L0.4 6.1L5.7 5.4L8 0.5Z"
-                      fill="#CBFC01"
-                    />
-                  </svg>
+                  <Rate color="#D4FB20" size={16} />
+
                 </div>
               </div>
 
               {/* Student Avatars + 2K+ */}
-              <div className="flex items-center -space-x-2.5 sm:-space-x-3 mt-1">
+              <div className="flex items-center -space-x-2.5 sm:-space-x-4">
                 {[1, 2, 3, 4, 5, 6, 7].map((num) => (
                   <div
                     key={num}
-                    className="relative w-[30px] sm:w-[34px] h-[30px] sm:h-[34px] rounded-full border-2 border-white overflow-hidden shrink-0"
+                    className="relative w-[43px] sm:w-[43px] h-[43px] sm:h-[43px] rounded-full overflow-hidden shrink-0"
                   >
                     <Image
                       src={`/avatar/student-${num}.png`}
@@ -279,8 +301,8 @@ export function Growth() {
                     />
                   </div>
                 ))}
-                <div className="relative w-[30px] sm:w-[34px] h-[30px] sm:h-[34px] rounded-full bg-[#CBFC01] border-2 border-white flex items-center justify-center shrink-0">
-                  <span className="font-body text-[10px] sm:text-[11px] font-bold text-[#242528]">
+                <div className="relative w-[43px] sm:w-[43px] h-[43px] sm:h-[43px] rounded-full bg-secondary-500 flex items-center justify-center shrink-0">
+                  <span className="font-body text-[12px] font-bold text-neutral-950 leading-[150%]">
                     2K+
                   </span>
                 </div>
@@ -304,7 +326,7 @@ export function Growth() {
               {CREATOR_FEATURES.map((feature) => (
                 <div key={feature} className="flex items-center gap-3">
                   <CheckCircle size={24} color="#003BE2" />
-                  <span className="font-body text-label-l text-[#242528]">
+                  <span className="font-body text-label-l text-neutral-950">
                     {feature}
                   </span>
                 </div>

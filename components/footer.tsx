@@ -10,12 +10,12 @@ import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
-    <footer className="bg-white">
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-10 lg:px-0 pt-[71px] pb-[48px]">
+    <footer className="bg-white px-5 sm:px-10  lg:px-30">
+      <div className="mx-auto max-w-300 px-5 sm:px-10 lg:px-0 pt-17.75 pb-[48px]">
         {/* Main footer content */}
-        <div className="flex flex-col lg:flex-row justify-between gap-12 lg:gap-[92px] mb-16 lg:mb-[130px]">
+        <div className="flex flex-col lg:flex-row  gap-12 lg:gap-23 mb-16 lg:mb-32.5">
           {/* Left: Logo + Newsletter */}
-          <div className="flex flex-col gap-[45px] max-w-[528px]">
+          <div className="flex flex-col gap-11.25 max-w-132">
             {/* Logo + Description */}
             <div className="flex flex-col gap-4">
               <Link href="/" className="flex items-center">
@@ -39,7 +39,7 @@ export function Footer() {
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="w-full sm:w-[376px] rounded-full border border-neutral-200 bg-white px-6 text-base text-neutral-950 placeholder:text-neutral-500 outline-none font-body h-[52px]"
+                  className="w-full sm:w-94 rounded-full  outline-[1px] outline-neutral-200 bg-white px-6 text-base text-neutral-950 font-body h-13"
                 />
                 <Button
                   variant="primary"
@@ -56,14 +56,14 @@ export function Footer() {
           </div>
 
           {/* Right: Navigation Columns (No column headers as per Figma) */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 max-w-[580px] w-full pt-1">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 sm:gap-10 max-w-145 w-full pt-12">
             {/* Column 1 */}
             <ul className="flex flex-col gap-4">
               {FOOTER_BROWSE_COL1.map((item) => (
                 <li key={item}>
                   <Link
                     href="#"
-                    className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
+                    className="font-body text-body-s! text-neutral-950 hover:text-primary-800 transition-colors"
                   >
                     {item}
                   </Link>
@@ -72,12 +72,12 @@ export function Footer() {
             </ul>
 
             {/* Column 2 */}
-            <ul className="flex flex-col gap-4">
+            <ul className="flex flex-col gap-4 h-fit">
               {FOOTER_BROWSE_COL2.map((item) => (
-                <li key={item}>
+                <li key={item} >
                   <Link
                     href="#"
-                    className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
+                    className="font-body text-body-s!  text-neutral-950 hover:text-primary-800 transition-colors "
                   >
                     {item}
                   </Link>
@@ -88,10 +88,10 @@ export function Footer() {
             {/* Column 3 */}
             <ul className="flex flex-col gap-4">
               {FOOTER_PLATFORM.map((item) => (
-                <li key={item}>
+                <li key={item} className="m-0! p-0!">
                   <Link
                     href="#"
-                    className="font-body text-body-s text-neutral-950 hover:text-primary-800 transition-colors"
+                    className="font-body text-body-s!  text-neutral-950 hover:text-primary-800 transition-colors m-0! p-0!"
                   >
                     {item}
                   </Link>
@@ -102,8 +102,8 @@ export function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="border-t border-[#CED0D3]">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6">
+        <div className="border-t border-neutral-200">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-5.75">
             <p className="font-body text-body-xs text-neutral-950">
               @ 2023 ByteSpace. All rights reserved.
             </p>

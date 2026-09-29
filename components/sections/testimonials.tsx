@@ -4,10 +4,10 @@ import { Container } from "@/components/container";
 
 export function Testimonials() {
   return (
-    <section className="relative py-[74px] bg-[#FAFAFA] overflow-hidden">
+    <section className="relative pb-14.25 pt-18.5 bg-white overflow-hidden px-5 sm:px-10  lg:px-[118PX]">
       {/* Decorative gradient glow 1: Top-Right Lime Radial */}
       <div
-        className="absolute left-[842px] -top-[241px] w-[1137px] h-[1137px] rounded-full pointer-events-none z-0 blur-[20px]"
+        className="absolute left-210.5 -top-60.25 w-284.25 h-284.25 rounded-full pointer-events-none z-0 blur-2xl"
         style={{
           background:
             "radial-gradient(circle at 50% 50%, rgba(203, 252, 1, 0.4) 0%, rgba(203, 252, 1, 0.09) 53%, rgba(203, 252, 1, 0.02) 75%, rgba(203, 252, 1, 0) 100%)",
@@ -16,16 +16,16 @@ export function Testimonials() {
 
       {/* Decorative gradient glow 2: Top-Center Lime Radial */}
       <div
-        className="absolute left-[395px] -top-[138px] w-[672px] h-[672px] rounded-full pointer-events-none z-0 blur-[20px]"
+        className="absolute left-98.75 -top-34.5 w-168 h-168 rounded-full pointer-events-none z-0 blur-2xl"
         style={{
           background:
-            "radial-gradient(circle at 50% 50%, rgba(203, 252, 1, 0.6) 0%, rgba(203, 252, 1, 0.14) 53%, rgba(203, 252, 1, 0.04) 75%, rgba(203, 252, 1, 0) 100%)",
+            "radial-gradient(circle at 50% 50%, rgba(203, 252, 1, 0.6) 0%, rgba(203, 252, 1, 0.138) 53%, rgba(203, 252, 1, 0.006) 75%, rgba(203, 252, 1, 0) 100%)",
         }}
       />
 
       {/* Decorative gradient glow 3: Bottom-Left Blue Radial */}
       <div
-        className="absolute -left-[442px] top-[149px] w-[1137px] h-[1137px] rounded-full pointer-events-none z-0 blur-[20px]"
+        className="absolute -left-110.5 top-37.25 w-284.25 h-284.25 rounded-full pointer-events-none z-0 blur-2xl"
         style={{
           background:
             "radial-gradient(circle at 50% 50%, rgba(0, 59, 226, 0.24) 0%, rgba(0, 59, 226, 0.06) 53%, rgba(0, 59, 226, 0.01) 75%, rgba(0, 59, 226, 0) 100%)",
@@ -34,11 +34,11 @@ export function Testimonials() {
 
       <Container className="relative z-10">
         {/* Heading + Subtitle Row */}
-        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-[43px] mb-12 lg:mb-[72px]">
-          <h2 className="font-heading text-3xl sm:text-heading-m font-semibold leading-[1.2] text-[#040819] max-w-[580px] shrink-0 tracking-[-0.01em]">
+        <div className="flex flex-col lg:flex-row items-start lg:items-end justify-between gap-6 lg:gap-10.75 mb-12 lg:mb-18">
+          <h2 className="font-heading text-3xl sm:text-heading-m font-semibold leading-[1.2] text-[#040819] max-w-145 shrink-0 tracking-[-0.01em]">
             Discover What Our Community Is Saying
           </h2>
-          <p className="font-body text-base sm:text-body-l text-[#4F4F4F] max-w-[580px]">
+          <p className="font-body text-base sm:text-body-l text-[#4F4F4F] max-w-145">
             At ByteSpace, our vibrant community of learners and creators is at
             the heart of what we do. Hear directly from those who have
             experienced the transformative journey of learning and creating on
@@ -52,10 +52,10 @@ export function Testimonials() {
           {TESTIMONIALS.map((testimonial) => (
             <article
               key={testimonial.name}
-              className="flex flex-col gap-6 rounded-[24px] bg-white p-6 shadow-[0px_4px_24px_rgba(0,0,0,0.04)]"
+              className="flex flex-col gap-6 rounded-xl bg-white p-6 "
             >
               {/* Avatar (80x80px from Figma) */}
-              <div className="relative w-[80px] h-[80px] rounded-full overflow-hidden shrink-0">
+              <div className="relative w-20 h-20 rounded-full overflow-hidden shrink-0">
                 <Image
                   src={testimonial.avatar}
                   alt={testimonial.name}
@@ -66,17 +66,17 @@ export function Testimonials() {
               </div>
 
               {/* Name + Role */}
-              <div className="flex flex-col gap-1">
-                <h3 className="font-heading text-heading-xs font-semibold leading-[1.2] text-[#040819]">
+              <div className="flex flex-col">
+                <h3 className="font-heading text-heading-xs  text-[#040819]">
                   {testimonial.name}
                 </h3>
-                <span className="font-body text-body-l text-[#003BE2]">
+                <span className="font-body text-body-l text-primary-800">
                   {testimonial.role}
                 </span>
               </div>
 
               {/* Quote */}
-              <p className="font-body text-body-l text-[#4F4F4F] leading-[1.6]">
+              <p className="font-body text-body-l text-[#4F4F4F] ">
                 {testimonial.quote}
               </p>
             </article>
