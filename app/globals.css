@@ -172,6 +172,8 @@
    --color-surface-tertiary: var(--surface-tertiary);
    --color-surface-tag: var(--surface-tag);
    --color-surface-icon: var(--surface-icon);
+   --color-surface-hero: var(--surface-hero);
+   --color-surface-track: var(--surface-track);
 
    --color-cta-primary: var(--cta-primary);
    --color-cta-secondary: var(--cta-secondary);
@@ -188,6 +190,12 @@
    --color-text-white: var(--text-white);
    --color-text-tertiary: var(--text-tertiary);
    --color-text-muted: var(--text-muted);
+   --color-text-on-brand-primary: var(--text-on-brand-primary);
+   --color-text-on-brand-secondary: var(--text-on-brand-secondary);
+   --color-text-on-brand-muted: var(--text-on-brand-muted);
+   --color-on-brand-primary: var(--text-on-brand-primary);
+   --color-on-brand-secondary: var(--text-on-brand-secondary);
+   --color-on-brand-muted: var(--text-on-brand-muted);
 
    --color-border-primary: var(--border-primary);
    --color-border-white: var(--border-white);
@@ -203,14 +211,16 @@
 :root {
    /* Surface colors */
    --surface-white: #ffffff;
-   --surface-secondary: var(--color-neutral-50);
+   --surface-secondary: var(--color-primary-800);
    --surface-tertiary: var(--color-neutral-100);
    --surface-tag: var(--color-neutral-200);
    --surface-icon: var(--color-primary-50);
+   --surface-hero: var(--color-primary-800);
+   --surface-track: #f6f6f6;
 
    /* CTA colors */
    --cta-primary: var(--color-primary-500);
-   --cta-secondary: var(--color-secondary-500);
+   --cta-secondary: var(--color-secondary-400);
    --cta-tertiary: var(--color-neutral-200);
 
    /* Hover colors */
@@ -228,13 +238,16 @@
    --text-white: #ffffff;
    --text-tertiary: var(--color-neutral-500);
    --text-muted: var(--color-neutral-400);
+   --text-on-brand-primary: var(--color-neutral-50);
+   --text-on-brand-secondary: var(--color-neutral-100);
+   --text-on-brand-muted: var(--color-neutral-200);
 
    /* Border colors */
    --border-primary: var(--color-neutral-200);
    --border-white: #ffffff;
 
    /* Icon colors */
-   --icon-primary: var(--color-neutral-900);
+   --icon-primary: var(--color-primary-50);
    --icon-secondary: var(--color-neutral-600);
    --icon-brand: var(--color-primary-500);
 }
@@ -249,6 +262,8 @@
    --surface-tertiary: var(--color-neutral-800);
    --surface-tag: var(--color-neutral-700);
    --surface-icon: var(--color-primary-950);
+   --surface-hero: var(--color-primary-950);
+   --surface-track: var(--color-neutral-800);
 
    /* CTA colors */
    --cta-primary: var(--color-primary-500);
@@ -270,6 +285,9 @@
    --text-white: var(--color-neutral-950);
    --text-tertiary: var(--color-neutral-400);
    --text-muted: var(--color-neutral-600);
+   --text-on-brand-primary: var(--color-neutral-50);
+   --text-on-brand-secondary: var(--color-neutral-200);
+   --text-on-brand-muted: var(--color-neutral-400);
 
    /* Border colors */
    --border-primary: var(--color-neutral-800);
