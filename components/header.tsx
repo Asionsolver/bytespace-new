@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { NAV_LINKS, NAV_ACTIONS } from "@/lib/constants";
-import { Container } from "@/components/container";
 import { Cart } from "@/icons";
 
 export function Header() {

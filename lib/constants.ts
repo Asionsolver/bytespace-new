@@ -66,6 +66,7 @@ export const COURSES = [
     students: 26,
     price: 25,
     priceLabel: "/lifetime",
+    rating: 4.5,
   },
   {
     title: "Build Digital Asset",
@@ -78,6 +79,7 @@ export const COURSES = [
     students: 26,
     price: 25,
     priceLabel: "/lifetime",
+    rating: 4.5,
   },
   {
     title: "the Power of Big Data",
@@ -90,6 +92,7 @@ export const COURSES = [
     students: 26,
     price: 25,
     priceLabel: "/lifetime",
+    rating: 4.5,
   },
   {
     title: "Balancing Productivity and Self-Care",
@@ -102,6 +105,7 @@ export const COURSES = [
     students: 26,
     price: 25,
     priceLabel: "/lifetime",
+    rating: 4.5,
   },
   {
     title: "Mastering Money Management",
@@ -114,6 +118,7 @@ export const COURSES = [
     students: 26,
     price: 25,
     priceLabel: "/lifetime",
+    rating: 4.5,
   },
   {
     title: "From Idea to Startup Success",
@@ -126,6 +131,7 @@ export const COURSES = [
     students: 26,
     price: 25,
     priceLabel: "/lifetime",
+    rating: 4.5,
   },
 ] as const;
 

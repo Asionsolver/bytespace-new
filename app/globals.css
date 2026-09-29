@@ -123,6 +123,8 @@
    --text-heading-xs--font-family: var(--font-heading);
 
    /* Body: Satoshi Regular (400), Line-Height 160% */
+
+
    --text-body-l: 18px;
    --text-body-l--line-height: 1.6;
    --text-body-l--font-weight: 400;
@@ -144,6 +146,11 @@
    --text-body-xs--font-family: var(--font-body);
 
    /* Label: Satoshi Medium (500), Line-Height 120% */
+   --text-label-xl: 20px;
+   --text-label-xl--line-height: 1.2;
+   --text-label-xl--font-weight: 500;
+   --text-label-xl--font-family: var(--font-body);
+
    --text-label-l: 18px;
    --text-label-l--line-height: 1.2;
    --text-label-l--font-weight: 500;

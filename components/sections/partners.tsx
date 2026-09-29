@@ -4,7 +4,7 @@ import { PARTNER_LOGOS } from "@/lib/constants";
 export function Partners() {
   return (
     <section className="bg-neutral-50 py-20">
-      <div className="mx-auto max-w-[1200px] ">
+      <div className="mx-auto max-w-fit ">
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-[72px]">
           {PARTNER_LOGOS.map((logo) => (
             <Image

@@ -15,14 +15,14 @@ const ICON_MAP: Record<string, ComponentType<IconProps>> = {
 
 export function Explore() {
   return (
-    <section className="py-20 bg-white">
+    <section className="pb-30 bg-white">
       <Container>
         {/* Section Heading */}
-        <div className="flex flex-col items-center gap-4 mb-16">
-          <h2 className="font-heading text-heading-s font-semibold leading-[1.2] text-neutral-950 text-center">
+        <div className="flex flex-col items-center gap-4 mb-17">
+          <h2 className="font-heading text-heading-s  text-[#040819] text-center">
             Explore Diverse Learning Paths at Bytespace
           </h2>
-          <p className="font-body text-body-l text-neutral-400 text-center max-w-[964px]">
+          <p className="font-body text-body-l text-neutral-400 text-center max-w-[917px]">
             At Bytespace, we believe in empowering individuals through knowledge.
             Our diverse range of courses spans various fields, ensuring there&apos;s
             something for everyone. Unleash your potential and explore our
@@ -37,12 +37,12 @@ export function Explore() {
             return (
               <div
                 key={category.name}
-                className="flex flex-col items-center gap-3 rounded-3xl bg-neutral-50 py-9 px-6 hover:bg-neutral-100 transition-colors cursor-pointer"
+                className="flex flex-col items-center gap-3 rounded-xl outline outline-neutral-200 pt-9 pb-8.75 "
               >
-                <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-white">
+                <div className="flex items-center justify-center w-14 h-14 rounded-full bg-secondary-400">
                   {IconComponent && <IconComponent size={36} color="#242528" />}
                 </div>
-                <span className="font-body text-xl font-medium leading-[1.2] text-neutral-950 text-center">
+                <span className="font-body text-label-xl font-medium leading-[1.2] text-neutral-950 text-center">
                   {category.name}
                 </span>
               </div>
