@@ -31,7 +31,7 @@ export function ErrorHero() {
         </div>
 
         {/* Overlapping Headline */}
-        <h1 className="font-heading font-bold text-[30px] sm:text-[44px] lg:text-[54px] text-white tracking-tight leading-[1.12] -mt-8 sm:-mt-14 md:-mt-18 lg:-mt-22 relative z-10 max-w-[720px]">
+        <h1 className="font-heading font-bold text-[30px] sm:text-[44px] lg:text-[54px] text-white tracking-tight leading-[1.12] -mt-8 sm:-mt-14 md:-mt-18 lg:-mt-12 relative z-10 max-w-[720px]">
           The page you are looking
           <br />
           for doesn’t exist
