@@ -11,3 +11,5 @@ export * from './arrow-right';
 export * from './signal-level';
 export * from './check-circle';
 export * from './rate';
+export * from './facebook';
+export * from './google';

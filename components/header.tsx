@@ -14,7 +14,7 @@ export function Header() {
             alt="ByteSpace"
             width={171}
             height={37}
-            className="h-[37px] w-auto object-contain"
+            className="h-9.25 w-auto object-contain"
             priority
           />
         </Link>
@@ -26,8 +26,8 @@ export function Header() {
               key={link.label}
               href={link.href}
               className={`transition-colors hover:text-text-white ${link.active
-                  ? "text-text-on-brand-primary font-medium text-label-m"
-                  : "text-text-on-brand-muted font-normal text-base leading-[160%]"
+                ? "text-text-on-brand-primary font-medium text-label-m"
+                : "text-text-on-brand-muted font-normal text-base leading-[160%]"
                 }`}
             >
               {link.label}

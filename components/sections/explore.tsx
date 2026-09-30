@@ -22,7 +22,7 @@ export function Explore() {
           <h2 className="font-heading text-heading-s  text-[#040819] text-center">
             Explore Diverse Learning Paths at Bytespace
           </h2>
-          <p className="font-body text-body-l text-neutral-400 text-center max-w-[917px]">
+          <p className="font-body text-body-l text-neutral-400 text-center max-w-229.25">
             At Bytespace, we believe in empowering individuals through knowledge.
             Our diverse range of courses spans various fields, ensuring there&apos;s
             something for everyone. Unleash your potential and explore our

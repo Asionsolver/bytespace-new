@@ -12,10 +12,10 @@ export function Courses() {
       <Container>
         {/* Section Heading */}
         <div className="flex flex-col items-center gap-4 mb-10.5">
-          <h2 className="font-heading text-heading-m  text-[#040819] text-center max-w-[588px]">
+          <h2 className="font-heading text-heading-m  text-[#040819] text-center max-w-147">
             Discover Your Passion, Build Your Skills
           </h2>
-          <p className="font-body text-body-l text-neutral-400 text-center max-w-[917px]">
+          <p className="font-body text-body-l text-neutral-400 text-center max-w-229.25">
             At Bytespace Courses, we bring you closer to life-changing knowledge.
             Explore a variety of courses across different fields, from technology
             to the arts, and make a difference in your career and life.
@@ -96,10 +96,10 @@ function CourseCard({
   const avatarSrcs = ["/avatar/avatar-one.png", "/avatar/avatar-two.png", "/avatar/avatar-three.png"];
 
   return (
-    <Card className="flex flex-col px-4  pt-4 rounded-xl w-full max-w-[373px] mx-auto">
+    <Card className="flex flex-col px-4  pt-4 rounded-xl w-full max-w-93.25 mx-auto">
       {/* Image */}
       <CardHeader>
-        <div className="relative w-full aspect-[341/200] overflow-hidden rounded-[12px]">
+        <div className="relative w-full aspect-341/200 overflow-hidden rounded-[12px]">
           <Image
             src={image}
             alt={title}

@@ -171,7 +171,7 @@ export function Hero() {
           style={{ left: "431px", top: "512px", width: "578px", height: "541px" }}
         >
           <Image
-            src="/hero-student.png"
+            src="/hero-one.webp"
             alt="Student learning on ByteSpace platform"
             width={578}
             height={541}

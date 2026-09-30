@@ -48,7 +48,7 @@ export function Testimonials() {
         </div>
 
         {/* Testimonial Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-[41px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10.25">
           {TESTIMONIALS.map((testimonial) => (
             <article
               key={testimonial.name}
