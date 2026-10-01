@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { AvatarGroup } from "@/components/ui/avatar";
 import { SignalLevel, Star } from "@/icons";
 
@@ -26,6 +27,7 @@ const DEFAULT_AVATARS = [
 ];
 
 export function CourseCard({
+  id = 1,
   title,
   author,
   image,
@@ -39,7 +41,11 @@ export function CourseCard({
   rating = 4.5,
 }: CourseCardProps) {
   return (
-    <article className="group flex flex-col bg-white outline outline-neutral-200 rounded-xl p-4 w-full max-w-93.25 mx-auto hover:shadow-xl hover:outline-primary-800/40 transition-all duration-300">
+    <Link
+      href={`/courses/${id}`}
+      className="block w-full max-w-93.25 mx-auto focus:outline-none"
+    >
+      <article className="group flex flex-col bg-white outline outline-neutral-200 rounded-xl p-4 w-full hover:shadow-xl hover:outline-primary-800/40 transition-all duration-300 cursor-pointer">
       {/* Thumbnail with overlay badges */}
       <div className="relative w-full aspect-[341/195.14] rounded-[12px] overflow-hidden bg-neutral-100">
         <Image
@@ -117,5 +123,6 @@ export function CourseCard({
         </div>
       </div>
     </article>
+  </Link>
   );
 }

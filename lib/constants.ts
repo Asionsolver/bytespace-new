@@ -84,6 +84,7 @@ export const COURSE_TABS = [
 // -----------------------------------------------------------------------------
 export const COURSES = [
   {
+    id: 1,
     title: "Learn Figma from Basic",
     author: "purepearl studio",
     image: "/courses/courses-one.jpg",
@@ -97,6 +98,7 @@ export const COURSES = [
     rating: 4.5,
   },
   {
+    id: 2,
     title: "Build Digital Asset",
     author: "purepearl studio",
     image: "/courses/courses-two.jpg",
@@ -110,6 +112,7 @@ export const COURSES = [
     rating: 4.5,
   },
   {
+    id: 3,
     title: "the Power of Big Data",
     author: "purepearl studio",
     image: "/courses/courses-three.jpg",
@@ -123,6 +126,7 @@ export const COURSES = [
     rating: 4.5,
   },
   {
+    id: 4,
     title: "Balancing Productivity and Self-Care",
     author: "purepearl studio",
     image: "/courses/courses-four.jpg",
@@ -136,6 +140,7 @@ export const COURSES = [
     rating: 4.5,
   },
   {
+    id: 5,
     title: "Mastering Money Management",
     author: "purepearl studio",
     image: "/courses/courses-five.jpg",
@@ -149,6 +154,7 @@ export const COURSES = [
     rating: 4.5,
   },
   {
+    id: 6,
     title: "From Idea to Startup Success",
     author: "purepearl studio",
     image: "/courses/courses-six.jpg",
@@ -1365,3 +1371,133 @@ export const FOOTER_LEGAL = [
   "Terms of Service",
   "Cookies Settings",
 ] as const;
+
+// -----------------------------------------------------------------------------
+// Course Details Data Types & Defaults (Figma node 55:4066)
+// -----------------------------------------------------------------------------
+export interface CourseDetailLesson {
+  number: string;
+  title: string;
+  duration: string;
+}
+
+export interface CourseDetailData {
+  id: number;
+  title: string;
+  subtitle: string;
+  author: string;
+  rating: number;
+  reviewsCount: number;
+  studentsCount: number;
+  level: string;
+  videoPreview: string;
+  description: string[];
+  sneakPeekImages: string[];
+  keyPoints: string[];
+  lessonsCount: number;
+  totalDuration: string;
+  lessons: CourseDetailLesson[];
+  moreVideosCount: number;
+  enrollPitch: string;
+  price: number;
+  priceLabel: string;
+  includes: string[];
+  creator: {
+    name: string;
+    role: string;
+    avatar: string;
+    bio: string;
+  };
+}
+
+export const DEFAULT_COURSE_DETAIL: CourseDetailData = {
+  id: 2,
+  title: "Build Digital Asset: A Comprehensive Guide",
+  subtitle: "Unlock the Power of Digital Creation with Expert Guidance",
+  author: "purepearl studio",
+  rating: 4.8,
+  reviewsCount: 172,
+  studentsCount: 199,
+  level: "Intermediate",
+  videoPreview: "/course-details/video-preview.png",
+  description: [
+    'Embark on an enlightening exploration into the world of digital creation with our comprehensive course, "Build Digital Assets: A Comprehensive Guide." This transformative learning experience invites you to delve deep into the intricacies of crafting impactful digital content. From laying the groundwork with foundational concepts to mastering advanced techniques, this guide is meticulously curated to empower you with the skills essential for navigating the dynamic landscape of digital asset creation.',
+    "In the initial modules, you'll establish a solid foundation by immersing yourself in the foundational concepts that form the backbone of digital asset creation. Understand the fundamental elements that constitute compelling digital content and gain proficiency in leveraging these elements to communicate effectively in the digital realm.",
+    "As you progress through the course, you'll ascend to higher levels of expertise, delving into the nuances of design principles that drive impactful creations. Uncover the secrets behind effective visual communication, exploring color theory, typography, and layout strategies that elevate your digital assets to new heights. Engage in hands-on exercises that reinforce your understanding, allowing you to apply these principles in practical scenarios.",
+  ],
+  sneakPeekImages: [
+    "/course-details/sneak-peek-1.png",
+    "/course-details/sneak-peek-2.png",
+    "/course-details/sneak-peek-3.png",
+    "/course-details/sneak-peek-4.png",
+  ],
+  keyPoints: [
+    "Foundational Concepts",
+    "Design Principles Mastery",
+    "Advanced Techniques in Digital Creation",
+    "Project Showcase and Critique",
+    "Optimizing for Various Platforms",
+    "Digital Asset Management Best Practices",
+    "Monetization Strategies",
+    "Capstone Project: Building Your Portfolio",
+  ],
+  lessonsCount: 112,
+  totalDuration: "24 hours",
+  lessons: [
+    {
+      number: "01",
+      title: "Introduction to Digital Assets",
+      duration: "12 mins",
+    },
+    {
+      number: "02",
+      title: "Design Principles for Impacts",
+      duration: "21 mins",
+    },
+    {
+      number: "03",
+      title: "Advanced Techniques in Digital Creation",
+      duration: "16 mins",
+    },
+  ],
+  moreVideosCount: 99,
+  enrollPitch: "Ready to Dive In? Enroll Now and Start Building Your Digital Future!",
+  price: 25,
+  priceLabel: "/lifetime",
+  includes: [
+    "Learning Resources",
+    "Quality Lesson Videos",
+    "Certificate of Completion",
+    "Private Consultation",
+  ],
+  creator: {
+    name: "PurePearl Studio",
+    role: "Professional Creator",
+    avatar: "/course-details/creator-avatar.png",
+    bio: "Ready to Dive In? Enroll Now and Start Building Your Digital Future!",
+  },
+};
+
+export function getCourseById(id: string | number): CourseDetailData {
+  const numericId = Number(id);
+  const found = ALL_COURSES.find((c) => c.id === numericId);
+
+  if (!found) {
+    return DEFAULT_COURSE_DETAIL;
+  }
+
+  return {
+    ...DEFAULT_COURSE_DETAIL,
+    id: found.id,
+    title: found.id === 2 ? DEFAULT_COURSE_DETAIL.title : `${found.title}: A Comprehensive Guide`,
+    author: found.author,
+    price: found.price,
+    priceLabel: found.priceLabel,
+    rating: found.rating || DEFAULT_COURSE_DETAIL.rating,
+    level: found.level,
+    creator: {
+      ...DEFAULT_COURSE_DETAIL.creator,
+      name: found.author.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase()),
+    },
+  };
+}

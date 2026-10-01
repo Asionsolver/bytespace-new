@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { COURSES, COURSE_TABS } from "@/lib/constants";
 import { Container } from "@/components/container";
 import { Badge } from "@/components/ui/badge";
@@ -67,6 +68,7 @@ export function Courses() {
 /*  CourseCard (internal to this section)                                      */
 /* -------------------------------------------------------------------------- */
 interface CourseCardProps {
+  id?: number | string;
   title: string;
   author: string;
   image: string;
@@ -81,6 +83,7 @@ interface CourseCardProps {
 }
 
 function CourseCard({
+  id = 1,
   title,
   author,
   image,
@@ -96,7 +99,11 @@ function CourseCard({
   const avatarSrcs = ["/avatar/avatar-one.png", "/avatar/avatar-two.png", "/avatar/avatar-three.png"];
 
   return (
-    <Card className="flex flex-col px-4  pt-4 rounded-xl w-full max-w-93.25 mx-auto">
+    <Link
+      href={`/courses/${id}`}
+      className="block w-full max-w-93.25 mx-auto focus:outline-none"
+    >
+      <Card className="flex flex-col px-4 pt-4 rounded-xl w-full hover:shadow-xl transition-all duration-300 cursor-pointer">
       {/* Image */}
       <CardHeader>
         <div className="relative w-full aspect-341/200 overflow-hidden rounded-[12px]">
@@ -174,8 +181,7 @@ function CourseCard({
           </span>
         </div>
       </CardContent>
-
-
     </Card>
+  </Link>
   );
 }
