@@ -65,7 +65,7 @@ export function CoursesHero({
   };
 
   return (
-    <section className="relative z-40 h-auto min-h-[360px] pb-10 md:pb-0 md:h-[360px] bg-primary-800 overflow-visible select-none">
+    <section className="relative z-40 h-auto min-h-90 pb-10 md:pb-0 md:h-90 bg-primary-800 overflow-visible select-none">
       {/* Background Grid Pattern */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <Image
@@ -78,15 +78,15 @@ export function CoursesHero({
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-50 flex flex-col items-center pt-[148px] px-5 max-w-[1200px] mx-auto">
+      <div className="relative z-50 flex flex-col items-center pt-37 px-5 max-w-300 mx-auto">
         <h1 className="font-heading text-heading-s font-semibold text-neutral-50 text-center tracking-[-0.01em]">
           Find Your Next Course
         </h1>
 
         {/* Search & Scope Bar */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 w-full max-w-[620px] justify-center">
+        <div className="flex flex-col sm:flex-row items-center gap-4 mt-8 w-full max-w-155 justify-center">
           {/* Search Input Box */}
-          <div className="flex items-center gap-2 bg-white rounded-full px-6 h-[52px] w-full sm:w-[461px] shadow-sm">
+          <div className="flex items-center gap-2 bg-white rounded-full px-6 h-13 w-full sm:w-115.25 shadow-sm">
             <Search size={24} color="#82868E" className="shrink-0" />
             <input
               ref={inputRef}
@@ -94,7 +94,7 @@ export function CoursesHero({
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
               placeholder={getPlaceholder(selectedScope)}
-              className="w-full bg-transparent font-body text-body-l text-neutral-950 placeholder:text-neutral-400 outline-none"
+              className="w-full bg-transparent font-body text-body-l text-neutral-950 outline-none"
             />
           </div>
 
@@ -104,15 +104,14 @@ export function CoursesHero({
               type="button"
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               style={{ cursor: "pointer" }}
-              className="flex items-center justify-center gap-2 bg-secondary-400 hover:bg-secondary-500 active:scale-[0.98] text-neutral-950 font-body text-label-l font-medium h-[52px] px-6 rounded-full transition-all cursor-pointer w-full sm:w-auto"
+              className="flex items-center justify-center gap-2 bg-secondary-400 hover:bg-secondary-500 active:scale-[0.98] text-neutral-950 font-body text-label-l font-medium h-13 px-6 rounded-full transition-all cursor-pointer w-full sm:w-auto"
             >
               <span>{selectedScope}</span>
               <ChevronDown
                 size={24}
                 color="#242528"
-                className={`transition-transform duration-200 ${
-                  isDropdownOpen ? "rotate-180" : ""
-                }`}
+                className={`transition-transform duration-200 ${isDropdownOpen ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
@@ -128,11 +127,10 @@ export function CoursesHero({
                         type="button"
                         onClick={() => handleSelectScope(scope)}
                         style={{ cursor: "pointer" }}
-                        className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-[12px] font-body text-label-m text-left transition-all cursor-pointer ${
-                          isSelected
-                            ? "bg-primary-50 text-primary-800 font-semibold"
-                            : "text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950 active:bg-neutral-200"
-                        }`}
+                        className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-[12px] font-body text-label-m text-left transition-all cursor-pointer ${isSelected
+                          ? "bg-primary-50 text-primary-800 font-semibold"
+                          : "text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950 active:bg-neutral-200"
+                          }`}
                       >
                         <span>{scope}</span>
                         {isSelected && (

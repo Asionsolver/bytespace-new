@@ -344,7 +344,7 @@ export function AuthLayout({ mode, children }: AuthLayoutProps) {
                     </div>
                   ))}
                   <div className="w-10.75 h-10.75 rounded-full bg-neutral-950 flex items-center justify-center shrink-0 shadow-xs z-10">
-                    <span className="text-[12px] leading-[150%] font-bold text-[#F5F5F6]">2K+</span>
+                    <span className="text-[12px] leading-[150%] font-bold text-neutral-50">2K+</span>
                   </div>
                 </div>
               </div>

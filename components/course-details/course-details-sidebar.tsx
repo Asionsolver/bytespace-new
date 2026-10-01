@@ -115,18 +115,24 @@ export function CourseDetailsSidebar({ course }: CourseDetailsSidebarProps) {
       {/* 4. Creator Profile Card */}
       <div className="mt-6 pt-6 border-t border-neutral-200">
         <div className="flex items-center gap-3">
-          <div className="relative w-[52px] h-[52px] rounded-full overflow-hidden bg-neutral-100 shrink-0">
+          <Link
+            href="/creators/purepearl-studio"
+            className="relative w-[52px] h-[52px] rounded-full overflow-hidden bg-neutral-100 shrink-0 hover:opacity-90 transition-opacity"
+          >
             <Image
               src={course.creator.avatar}
               alt={course.creator.name}
               fill
               className="object-cover"
             />
-          </div>
+          </Link>
           <div className="min-w-0">
-            <h5 className="font-heading text-label-l font-medium text-neutral-950 truncate">
+            <Link
+              href="/creators/purepearl-studio"
+              className="font-heading text-label-l font-medium text-neutral-950 truncate hover:text-primary-800 transition-colors block"
+            >
               {course.creator.name}
-            </h5>
+            </Link>
             <p className="font-body text-body-m text-neutral-700">
               {course.creator.role}
             </p>
@@ -138,7 +144,7 @@ export function CourseDetailsSidebar({ course }: CourseDetailsSidebarProps) {
         </p>
 
         <Link
-          href="/creators"
+          href="/creators/purepearl-studio"
           className="inline-flex items-center justify-center w-full sm:w-auto mt-6 px-4 py-2 outline outline-neutral-200 rounded-full font-body text-label-m font-medium text-neutral-700 hover:border-neutral-400 hover:bg-neutral-50 transition-all text-center"
         >
           See Full Profile

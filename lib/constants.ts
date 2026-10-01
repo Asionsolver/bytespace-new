@@ -1501,3 +1501,41 @@ export function getCourseById(id: string | number): CourseDetailData {
     },
   };
 }
+
+// -----------------------------------------------------------------------------
+// Creator Profile Data (Figma Node 60:1878)
+// -----------------------------------------------------------------------------
+export interface CreatorProfileData {
+  id: string;
+  name: string;
+  role: string;
+  tagline: string;
+  avatar: string;
+  bio: string[];
+  productsCount: number;
+  followersCount: number;
+}
+
+export const CREATOR_PUREPEARL_STUDIO: CreatorProfileData = {
+  id: "purepearl-studio",
+  name: "PurePearl Studio",
+  role: "Creator",
+  tagline: "Passionate UI/UX, Web designer",
+  avatar: "/creator/purepearl-avatar.png",
+  bio: [
+    "Welcome to the creative world of PurePearl Studio. Here, you'll discover the passion, expertise, and inspiration that drive my creative journey. Let's explore and learn together!",
+    "Dive into my creative portfolio, showcasing a glimpse of my artistic endeavors. From digital designs to multimedia projects, each piece tells a unique story. Explore the world of creativity with me.",
+  ],
+  productsCount: 3,
+  followersCount: 12,
+};
+
+export function getCreatorById(id?: string): CreatorProfileData {
+  return CREATOR_PUREPEARL_STUDIO;
+}
+
+export function getCoursesByCreator(authorOrSlug?: string) {
+  // Returns courses created by PurePearl Studio (first 6 courses in Figma node 78:2503)
+  return ALL_COURSES.slice(0, 6);
+}
+

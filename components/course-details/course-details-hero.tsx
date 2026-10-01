@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { SignalLevel, Star, People, Share, Play } from "@/icons";
 import { CourseDetailData } from "@/lib/constants";
@@ -36,10 +37,10 @@ export function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
         />
       </div>
 
-      <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-10 lg:px-0">
+      <div className="relative z-10 w-full max-w-300 mx-auto px-5 sm:px-10 lg:px-0">
         {/* Top Header Row: Course Title & Share */}
         <div className="flex flex-col lg:flex-row lg:items-start justify-between gap-8 mt-15">
-          <div className="max-w-[1040px]">
+          <div className="max-w-260">
             <h1 className="font-heading text-heading-s sm:text-[36px] font-semibold text-neutral-50">
               {course.title}
             </h1>
@@ -48,9 +49,12 @@ export function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
             </p>
             <p className="font-body text-label-l text-[#F1F4FE] mt-6">
               by{" "}
-              <span className="text-secondary-400 font-medium">
+              <Link
+                href="/creators/purepearl-studio"
+                className="text-secondary-400 font-medium hover:underline cursor-pointer transition-colors"
+              >
                 {course.author}
-              </span>
+              </Link>
             </p>
 
             {/* Badges Row */}
@@ -129,7 +133,7 @@ export function CourseDetailsHero({ course }: CourseDetailsHeroProps) {
           </div>
 
           {/* Right: Sidebar Card (starts in hero next to video player and hangs down into white section) */}
-          <div className="w-full lg:w-[416px] shrink-0 lg:-mb-[440px] relative z-30">
+          <div className="w-full lg:w-104 shrink-0 lg:-mb-110 relative z-30">
             <CourseDetailsSidebar course={course} />
           </div>
         </div>

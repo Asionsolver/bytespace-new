@@ -177,7 +177,7 @@ export function CoursesContent() {
       />
 
       {/* 2. Main Page Container (1200px max width matching Figma) */}
-      <div className="w-full max-w-[1200px] mx-auto px-5 sm:px-10 lg:px-0">
+      <div className="w-full max-w-300 mx-auto px-5 sm:px-10 lg:px-0">
         {/* Filter & Sort Bar */}
         <CoursesFilterBar
           selectedLevel={selectedLevel}

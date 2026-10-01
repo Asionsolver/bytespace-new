@@ -14,12 +14,12 @@ const PREVIEW_AVATARS = [
 
 export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
   return (
-    <div className="relative w-full max-w-[520px] h-[370px] xs:h-[420px] sm:h-[510px] select-none scale-[0.68] xs:scale-[0.78] sm:scale-100 origin-top sm:origin-top-left transition-transform mx-auto sm:mx-0">
+    <div className="relative w-full max-w-130 h-92.5 xs:h-105 sm:h-127.5 select-none scale-[0.68] xs:scale-[0.78] sm:scale-100 origin-top sm:origin-top-left transition-transform mx-auto sm:mx-0">
       {/* 1. 3D DOODLE ORNAMENTS */}
       {showDoodles && (
         <>
           {/* Top-Left: Lime 3D Torus Ring */}
-          <div className="absolute left-[70px] sm:left-[85px] top-[0px] w-[82px] h-[82px] z-30 pointer-events-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)]">
+          <div className="absolute left-17.5 sm:left-21.25 top-0 w-20.5 h-20.5 z-30 pointer-events-none drop-shadow-[0_12px_24px_rgba(0,0,0,0.35)]">
             <Image
               src="/doodle/doodle-torus-lime.webp"
               alt=""
@@ -31,7 +31,7 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
           </div>
 
           {/* Bottom-Left: Lime 3D Pyramid */}
-          <div className="absolute -left-3 sm:-left-5 top-[270px] sm:top-[285px] w-[100px] h-[100px] z-30 pointer-events-none drop-shadow-[0_14px_28px_rgba(0,0,0,0.35)]">
+          <div className="absolute -left-3 sm:-left-5 top-67.5 sm:top-71.25 w-25 h-25 z-30 pointer-events-none drop-shadow-[0_14px_28px_rgba(0,0,0,0.35)]">
             <Image
               src="/doodle/doodle-pyramid-lime.webp"
               alt=""
@@ -43,7 +43,7 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
           </div>
 
           {/* Bottom-Right: White Squiggle Spring */}
-          <div className="absolute left-[360px] sm:left-[395px] top-[245px] sm:top-[255px] w-[80px] h-[90px] z-30 pointer-events-none drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)]">
+          <div className="absolute left-90 sm:left-98.75 top-61.25 sm:top-63.75 w-20 h-22.5 z-30 pointer-events-none drop-shadow-[0_8px_20px_rgba(0,0,0,0.25)]">
             <Image
               src="/doodle/doodle-white-spring.webp"
               alt=""
@@ -58,10 +58,10 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
 
       {/* 2. BACKGROUND STACKED CARD ("Build Digit..." with courses-one.jpg) */}
       <div
-        className="absolute left-0 top-[60px] sm:top-[70px] w-[270px] sm:w-[295px] bg-white rounded-[24px] p-3.5 sm:p-4 shadow-[0_12px_32px_rgba(0,0,0,0.16)] border border-white/60 pointer-events-none select-none z-10"
+        className="absolute left-0 top-15 sm:top-17.5 w-67.5 sm:w-73.75 bg-white rounded-[24px] p-3.5 sm:p-4 shadow-[0_12px_32px_rgba(0,0,0,0.16)] border border-white/60 pointer-events-none select-none z-10"
         aria-hidden="true"
       >
-        <div className="relative w-full aspect-[16/10] overflow-hidden rounded-[16px]">
+        <div className="relative w-full aspect-16/10 overflow-hidden rounded-lg">
           <Image
             src="/courses/courses-one.jpg"
             alt="Build Digital Products"
@@ -81,7 +81,7 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
             Build Digit...
           </h4>
           <p className="text-[11px] text-neutral-500 mt-0.5">
-            by <span className="text-[#0043ff] font-medium">purepearl studio</span>
+            by <span className="text-primary-700 font-medium">purepearl studio</span>
           </p>
 
           <div className="flex items-center gap-2 mt-2.5">
@@ -105,7 +105,7 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
           </div>
 
           <div className="flex items-baseline gap-1 mt-2">
-            <span className="font-heading font-bold text-[#0043ff] text-[15px] sm:text-[16px]">
+            <span className="font-heading font-bold text-primary-700 text-[15px] sm:text-[16px]">
               $25
             </span>
             <span className="text-[10px] text-neutral-400 font-body">
@@ -116,9 +116,9 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
       </div>
 
       {/* 3. FOREGROUND MAIN CARD ("the Power of Big Data") */}
-      <div className="absolute left-[110px] sm:left-[130px] top-[15px] z-20 w-[310px] sm:w-[340px] bg-white rounded-[26px] p-4 sm:p-4.5 shadow-[0_22px_50px_rgba(0,0,0,0.22)] border border-white/70">
+      <div className="absolute left-27.5 sm:left-32.5 top-3.75 z-20 w-77.5 sm:w-85 bg-white rounded-[26px] p-4 sm:p-4.5 shadow-[0_22px_50px_rgba(0,0,0,0.22)] border border-white/70">
         {/* Card Image with overlay badges */}
-        <div className="relative w-full aspect-[303/175] overflow-hidden rounded-[18px] bg-neutral-900">
+        <div className="relative w-full aspect-303/175 overflow-hidden rounded-[18px] bg-neutral-900">
           <Image
             src="/courses/courses-three.jpg"
             alt="the Power of Big Data"
@@ -149,7 +149,7 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
               </h3>
               <p className="font-body text-[11px] text-neutral-500 mt-0.5">
                 by{" "}
-                <span className="text-[#0043ff] font-medium">
+                <span className="text-primary-700 font-medium">
                   purepearl studio
                 </span>
               </p>
@@ -188,7 +188,7 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
 
           {/* Price */}
           <div className="flex items-baseline gap-1 mt-2.5 pb-0.5">
-            <span className="font-heading font-bold text-[#0043ff] text-[17px] sm:text-[18px]">
+            <span className="font-heading font-bold text-primary-700 text-[17px] sm:text-[18px]">
               $25
             </span>
             <span className="font-body text-[10px] text-neutral-400">
@@ -199,7 +199,7 @@ export function AuthCardPreview({ showDoodles = true }: AuthCardPreviewProps) {
       </div>
 
       {/* 4. "Happy Students" Floating Lime Badge */}
-      <div className="absolute left-[200px] sm:left-[235px] top-[305px] sm:top-[325px] z-25 bg-[#CBFC01] rounded-[22px] p-3.5 sm:p-4 shadow-[0_14px_32px_rgba(0,0,0,0.22)] w-[205px] sm:w-[225px]">
+      <div className="absolute left-50 sm:left-58.75 top-76.25 sm:top-81.25 z-25 bg-secondary-500 rounded-[22px] p-3.5 sm:p-4 shadow-[0_14px_32px_rgba(0,0,0,0.22)] w-51.25 sm:w-56.25">
         <div className="flex flex-col gap-0.5">
           <h4 className="font-heading font-bold text-neutral-950 text-[13px] sm:text-[14px] leading-tight">
             Happy Students
