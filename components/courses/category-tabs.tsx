@@ -19,11 +19,10 @@ export function CategoryTabs({ activeTab, onSelectTab }: CategoryTabsProps) {
               key={tab}
               type="button"
               onClick={() => onSelectTab(tab)}
-              className={`shrink-0 px-4 py-3 rounded-full font-body text-label-m font-medium transition-all duration-200 cursor-pointer ${
-                isActive
-                  ? "bg-secondary-400 text-neutral-950 shadow-sm"
+              className={`shrink-0 px-4 py-3 rounded-full font-body text-label-m font-medium transition-all duration-200 cursor-pointer ${isActive
+                  ? "bg-secondary-400 text-neutral-950 "
                   : "bg-neutral-50 text-neutral-700 hover:bg-neutral-100 hover:text-neutral-950"
-              }`}
+                }`}
             >
               {tab}
             </button>

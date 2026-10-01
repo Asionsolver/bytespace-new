@@ -125,8 +125,11 @@ function CourseCard({
       {/* Content */}
       <CardContent className="flex-1 px-0">
         <div className="flex items-start justify-between gap-2">
-          <div className="flex flex-col gap-1">
-            <h3 className="font-heading text-heading-xs font-semibold leading-[1.2] text-black">
+          <div className="flex flex-col gap-1 min-w-0 flex-1">
+            <h3
+              title={title}
+              className="font-heading text-heading-xs font-semibold leading-[1.2] text-black truncate"
+            >
               {title}
             </h3>
             <p className="font-body text-body-xs text-[#4F4F4F]">

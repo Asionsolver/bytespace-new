@@ -206,7 +206,7 @@ export function CoursesContent() {
         />
 
         {/* Courses Cards Grid */}
-        <section ref={gridSectionRef} className="pt-18 scroll-mt-24">
+        <section ref={gridSectionRef} className="pt-19.25 pb-4 scroll-mt-24">
           {displayedCourses.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center">
               {displayedCourses.map((course) => (
@@ -229,13 +229,15 @@ export function CoursesContent() {
           )}
         </section>
 
-        {/* Pagination: only shown if there are products and more than 1 page */}
-        {filteredCourses.length > 0 && totalPages > 1 && (
+        {/* Pagination: only shown if there are products and more than 1 page. If 1 page, provide bottom spacing before footer */}
+        {filteredCourses.length > 0 && totalPages > 1 ? (
           <Pagination
             currentPage={currentPage}
             totalPages={totalPages}
             onPageChange={handlePageChange}
           />
+        ) : (
+          <div className="pb-24" />
         )}
       </div>
     </div>

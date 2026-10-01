@@ -116,7 +116,7 @@ export function CoursesFilterBar({
   const hasActiveFilters = activeFilterCount > 0 || selectedSort !== "Most relevant";
 
   return (
-    <div className="flex flex-wrap items-center justify-between gap-4 w-full max-w-[1200px] mx-auto pt-18 relative z-20">
+    <div className="flex flex-wrap items-center justify-between gap-4 w-full max-w-300 mx-auto pt-18 relative z-20">
       {/* Left Filters Group */}
       <div className="flex flex-wrap items-center gap-4">
         {/* Filter Dropdown */}
@@ -125,9 +125,9 @@ export function CoursesFilterBar({
             type="button"
             onClick={() => toggleDropdown("filter")}
             style={{ cursor: "pointer" }}
-            className={`flex items-center justify-center gap-1.5 px-4 py-3 bg-white border rounded-full transition-all cursor-pointer ${selectedPrice !== "All" || selectedRating !== "All"
-              ? "border-primary-800 text-primary-800 font-medium shadow-xs"
-              : "border-neutral-200 text-neutral-700 hover:border-neutral-400 hover:bg-neutral-50"
+            className={`flex items-center justify-center gap-1 px-4 py-3 bg-white outline rounded-full transition-all cursor-pointer ${selectedPrice !== "All" || selectedRating !== "All"
+              ? "outline-primary-800 text-primary-800 font-medium shadow-xs"
+              : "outline-neutral-200 text-neutral-700 hover:outline-neutral-400 hover:bg-neutral-50"
               }`}
           >
             <Filter size={20} color="currentColor" />
@@ -141,9 +141,9 @@ export function CoursesFilterBar({
 
           {/* Filter Popover Menu */}
           {openDropdown === "filter" && (
-            <div className="absolute left-0 top-[calc(100%+8px)] w-72 bg-white rounded-lg shadow-xl shadow-neutral-900/10 border border-neutral-200 p-4 z-50">
+            <div className="absolute left-0 top-[calc(100%+8px)] w-72 bg-white rounded-lg shadow-xl shadow-neutral-900/10 outline outline-neutral-200 p-4 z-50">
               <div className="flex items-center justify-between border-b border-neutral-200 pb-3 mb-3">
-                <span className="font-heading text-sm font-semibold text-neutral-950">
+                <span className="font-heading text-sm font-medium text-neutral-950">
                   Filters
                 </span>
                 {hasActiveFilters && (

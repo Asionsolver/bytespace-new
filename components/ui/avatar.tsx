@@ -16,7 +16,7 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
     <div
       ref={ref}
       className={cn(
-        "relative shrink-0 overflow-hidden rounded-full border-2 border-white",
+        "relative shrink-0 overflow-hidden rounded-full ",
         className
       )}
       style={{ width: size, height: size }}
@@ -66,7 +66,7 @@ const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
         ))}
         {remaining > 0 && (
           <div
-            className="relative shrink-0 flex items-center justify-center rounded-full bg-secondary-400 text-neutral-950 text-label-xs font-medium -ml-2 border-2 border-white"
+            className="relative shrink-0 flex items-center justify-center rounded-full bg-secondary-400 text-neutral-950 text-label-xs font-medium -ml-2"
             style={{ width: size, height: size }}
           >
             {remaining}+

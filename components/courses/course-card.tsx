@@ -39,7 +39,7 @@ export function CourseCard({
   rating = 4.5,
 }: CourseCardProps) {
   return (
-    <article className="group flex flex-col bg-white border border-[#CED0D3] rounded-[24px] p-4 w-full max-w-[373px] mx-auto hover:shadow-xl hover:border-primary-800/40 transition-all duration-300">
+    <article className="group flex flex-col bg-white outline outline-neutral-200 rounded-xl p-4 w-full max-w-93.25 mx-auto hover:shadow-xl hover:outline-primary-800/40 transition-all duration-300">
       {/* Thumbnail with overlay badges */}
       <div className="relative w-full aspect-[341/195.14] rounded-[12px] overflow-hidden bg-neutral-100">
         <Image
@@ -51,13 +51,13 @@ export function CourseCard({
         />
         {/* Badges overlay */}
         <div className="absolute bottom-3 left-3 right-3 flex items-center gap-3 flex-wrap">
-          <span className="bg-[#F6F6F6]/60 backdrop-blur-[4px] rounded-full px-3 py-1.5 text-label-xs font-medium text-[#4F4F4F]">
+          <span className="bg-[#F6F6F6]/60 backdrop-blur-sm rounded-full px-3 py-1.5 text-label-xs font-medium text-[#4F4F4F]">
             {lessons} Lessons
           </span>
-          <span className="bg-[#F6F6F6]/60 backdrop-blur-[4px] rounded-full px-3 py-1.5 text-label-xs font-medium text-[#4F4F4F]">
+          <span className="bg-[#F6F6F6]/60 backdrop-blur-sm rounded-full px-3 py-1.5 text-label-xs font-medium text-[#4F4F4F]">
             {duration}
           </span>
-          <span className="bg-[#F6F6F6]/60 backdrop-blur-[4px] rounded-full px-3 py-1.5 text-label-xs font-medium text-[#4F4F4F]">
+          <span className="bg-[#F6F6F6]/60 backdrop-blur-sm rounded-full px-3 py-1.5 text-label-xs font-medium text-[#4F4F4F]">
             {comments} Comments
           </span>
         </div>
@@ -67,11 +67,14 @@ export function CourseCard({
       <div className="flex flex-col flex-1 pt-4">
         {/* Title, Author & Rating */}
         <div className="flex items-start justify-between gap-2">
-          <div className="flex flex-col min-w-0">
-            <h3 className="font-heading text-heading-xs font-semibold text-black leading-snug line-clamp-1 group-hover:text-primary-800 transition-colors">
+          <div className="flex flex-col min-w-0 flex-1">
+            <h3
+              title={title}
+              className="font-heading text-heading-xs text-black group-hover:text-primary-800 transition-colors truncate"
+            >
               {title}
             </h3>
-            <p className="font-body text-body-xs text-[#4F4F4F] mt-1">
+            <p className="font-body text-body-xs text-[#4F4F4F]">
               by <span className="text-primary-800 font-normal">{author}</span>
             </p>
           </div>
@@ -87,7 +90,7 @@ export function CourseCard({
         </div>
 
         {/* Level & Student Avatars */}
-        <div className="flex items-center gap-3 mt-4">
+        <div className="flex items-center gap-3 mt-5">
           <div className="flex items-center gap-1 bg-neutral-50 px-3 py-1.5 rounded-full">
             <SignalLevel size={20} color="#4B4C53" />
             <span className="font-body text-label-xs font-medium text-neutral-700">
