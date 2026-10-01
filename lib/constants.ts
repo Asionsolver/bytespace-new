@@ -17,6 +17,35 @@ export const NAV_ACTIONS = [
 ] as const;
 
 // -----------------------------------------------------------------------------
+// Authentication Configuration & Copy
+// -----------------------------------------------------------------------------
+export const AUTH_CONTENT = {
+  register: {
+    badge: "Create an Account",
+    title: "Welcome to ByteSpace",
+    heroTitle: "Sign up and come in",
+    heroDescription:
+      "The registration process is straightforward, uncomplicated, and efficient, allowing users to sign up quickly, easily, and at no cost",
+    submitText: "Continue",
+    switchPrompt: "Already have an account?",
+    switchLinkText: "Login",
+    switchHref: "/signin",
+  },
+  login: {
+    badge: "Sign In",
+    title: "Welcome Back",
+    heroTitle: "Sign in with ease",
+    heroDescription:
+      "Experience a seamless and efficient sign-in process that grants you instant access to a world of knowledge.",
+    submitText: "Sign In",
+    switchPrompt: "New user?",
+    switchLinkText: "Create an account",
+    switchHref: "/join",
+  },
+} as const;
+
+
+// -----------------------------------------------------------------------------
 // Partner Logos
 // -----------------------------------------------------------------------------
 export const PARTNER_LOGOS = [
