@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { NAV_LINKS, NAV_ACTIONS } from "@/lib/constants";
 import { Cart } from "@/icons";
 
 export function Header() {
+  const pathname = usePathname();
+
   return (
     <header className="absolute top-0 left-0 right-0 z-50">
       <div className="mx-auto w-full max-w-360 flex items-center justify-between h-30 px-5 sm:px-10 lg:px-30">
@@ -21,18 +26,26 @@ export function Header() {
 
         {/* Navigation - desktop */}
         <nav className="hidden md:flex items-center gap-6">
-          {NAV_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              href={link.href}
-              className={`transition-colors hover:text-text-white ${link.active
-                ? "text-text-on-brand-primary font-medium text-label-m"
-                : "text-text-on-brand-muted font-normal text-base leading-[160%]"
+          {NAV_LINKS.map((link) => {
+            const isActive =
+              link.href === "/"
+                ? pathname === "/"
+                : pathname.startsWith(link.href);
+
+            return (
+              <Link
+                key={link.label}
+                href={link.href}
+                className={`transition-colors hover:text-text-white ${
+                  isActive
+                    ? "text-text-on-brand-primary font-medium text-label-m"
+                    : "text-text-on-brand-muted font-normal text-base leading-[160%]"
                 }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+              >
+                {link.label}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* Actions */}
